@@ -2,16 +2,16 @@ import requests
 import os
 
 
-def read_file_by_path(path_to_file):
-    with open(path_to_file) as f:
-        return f.read()
-
-
 def make_dirs_to_file(path_to_file):
     file_dirname = os.path.dirname(path_to_file)
 
     if not os.path.exists(file_dirname):
         os.makedirs(file_dirname)
+
+
+def read_file_by_path(path_to_file):
+    with open(path_to_file) as f:
+        return f.read()
 
 
 def write_file_by_path(path_to_file, text_data):
